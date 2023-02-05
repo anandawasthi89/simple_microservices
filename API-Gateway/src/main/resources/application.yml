@@ -9,8 +9,6 @@ spring:
       routes:
         - id: DEPARTMENT-SERVICE
           uri: lb://department-service
-          filter:
-            curcuit-breaker: 
           predicates:
             - Path=/Departments/**
         - id: USER-SERVICE
